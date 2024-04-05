@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="container text-center">
           <div className="row">
             <div className="col">
-              <div className="footer_title">© 2022 Company, Inc</div>
+              <div className="footer_title">@ 2024 mohit-shrivastava. All Rights Reserved.</div>
             </div>
             <div className="col">
               <div className="social_media_icon">
