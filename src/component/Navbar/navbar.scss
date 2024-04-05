@@ -1,0 +1,33 @@
+.navbar {
+  padding: 20px 38px;
+  .navlinks {
+    justify-content: end;
+  }
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link:active {
+    color: rgb(31, 133, 221) !important;
+  }
+  .SignIn_SignUp {
+    margin: 0 40px;
+  }
+}
+
+// model UI login and signUP
+.form_title_userImage {
+  height: 50px;
+  width: 50px;
+  margin: 0 20px;
+}
+.model_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+  .navbar {
+    padding: 7px 0px;
+  }
+}
