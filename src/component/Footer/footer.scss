@@ -23,6 +23,15 @@
   font-size: 24px;
   margin-right: 10px;
 }
+.social-link {
+  margin-right: 10px; /* Adjust spacing between social media icons */
+  color: #000; /* Adjust color of social media icons */
+  transition: color 0.3s ease; /* Add transition for smooth color change */
+
+  &:hover {
+    color: #007bff; /* Change color on hover */
+  }
+}
 
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
