@@ -11,7 +11,7 @@ export default function NavigationBar() {
         <nav className="navbar navbar-expand-lg .bg-body">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
-              Navbar
+              Logo
             </a>
             <button
               className="navbar-toggler"
