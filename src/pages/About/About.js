@@ -1,5 +1,5 @@
 import React from "react";
-import'./about.scss'
+import "./about.scss";
 
 export default function About() {
   return (
@@ -12,7 +12,7 @@ export default function About() {
           <center>
             <h2>About Me</h2>
           </center>
-          <div className="row aboutRow">
+          {/* <div className="row aboutRow">
             <div className="col-lg-6 col-md-12 text-center mb-3 mb-lg-0">
               <img
                 src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_1280.png"
@@ -33,7 +33,7 @@ export default function About() {
                 Know More
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
