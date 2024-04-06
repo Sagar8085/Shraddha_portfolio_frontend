@@ -7,12 +7,12 @@ export default function Footer() {
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div className="container text-center">
           <div className="row">
-            <div className="col">
+            <div className="col-lg-4 col-md-12 text-center mb-3 mb-lg-0">
               <div className="footer_title">
                 @ 2024 mohit-shrivastava. All Rights Reserved.
               </div>
             </div>
-            <div className="col">
+            <div className="col-lg-4 col-md-12 text-center mb-3 mb-lg-0">
               <div className="social_media_icon">
                 <a href="#" className="social-link">
                   <i className="fa-brands fa-twitter"></i>
@@ -39,6 +39,11 @@ export default function Footer() {
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
               </div>
+            </div>
+            <div className="col-lg-4 col-md-12 text-center mb-3 mb-lg-0">
+              <h2>Contact Information</h2>
+              <p>Email: example@example.com</p>
+              <p>Phone: 123-456-7890</p>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./navbar.scss";
 import Modal from "react-bootstrap/Modal";
 import LoginSignUp from "../../pages/Login/SignIn&SignUp";
+import { NavLink } from "react-router-dom";
 
 export default function NavigationBar() {
   const [show, setShow] = useState(false);
@@ -29,24 +30,42 @@ export default function NavigationBar() {
               id="navbarNavAltMarkup"
             >
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="home">
-                  Home
-                </a>
-                <a className="nav-link" href="blogs">
-                  Blogs
-                </a>
-                <a className="nav-link" href="experience">
+                <NavLink to="/">
+                  {" "}
+                  <a className="nav-link active" aria-current="page" href="#">
+                    Home
+                  </a>
+                </NavLink>
+                <NavLink to="blogs">
+                  <a className="nav-link" href="#">
+                    Blogs
+                  </a>
+                </NavLink>
+                <NavLink to="experience">
+                <a className="nav-link" href="#">
                   Experience
                 </a>
-                <a className="nav-link" href="project">
+                </NavLink>
+                <NavLink to="project">
+                <a className="nav-link" href="#">
                   Project
                 </a>
-                <a className="nav-link" href="about">
+                </NavLink>
+                <NavLink to="about">
+                <a className="nav-link" href="#">
                   About
                 </a>
-                <a className="nav-link" href="contact">
+                </NavLink>
+                <NavLink to="contact">
+                <a className="nav-link" href="#">
                   Contact
                 </a>
+                </NavLink>
+                <NavLink  to="admin">
+                <a className="nav-link" href="">
+                  Admin
+                </a>
+                </NavLink>
                 <button
                   type="button"
                   class="btn btn-outline-primary SignIn_SignUp"

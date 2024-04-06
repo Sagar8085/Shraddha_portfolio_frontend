@@ -1,0 +1,51 @@
+.mainDiv {
+  height: 80vh; // Ensure full page height
+  .avatar {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; // Adjust as needed
+    transition: transform 0.3s ease;
+  }
+  .homeRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  p.jobDescription {
+    font-size: 2rem;
+    font-weight: 700;
+    font-size: xx-large;
+  }
+
+  .UseName {
+    transition: transform 0.3s ease, opacity 0.3s ease; // Add transition effect to the transform and opacity properties
+  }
+
+  .avatar:hover {
+    transform: scale(1.1); // Zoom effect on hover
+  }
+
+  .avatar:hover + .UseName {
+    transform: translateY(-20px); // Slide up effect on hover
+    opacity: 1; // Make the name visible on hover
+  }
+
+  .jobDescription {
+    margin-bottom: 20px; // Add margin to separate job description from the name
+  }
+
+  .btn {
+    transition: background-color 0.3s ease; // Add transition effect to the background-color property of the button
+  }
+
+  .btn:hover {
+    background-color: #007bff; // Change background color on hover
+  }
+}
+
+@media (max-width: 768px) {
+  .avatar {
+    max-height: 150px; // Adjust as needed for smaller screens
+  }
+}

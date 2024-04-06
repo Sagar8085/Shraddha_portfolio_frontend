@@ -11,6 +11,23 @@
   .SignIn_SignUp {
     margin: 0 40px;
   }
+  a {
+    text-decoration: none;
+  }
+  .navbar-brand {
+    color: #333333; // Set text color of navbar brand
+    font-weight: bold; // Add bold font style
+    font-size: 24px; // Adjust font size as needed
+  }
+  .navbar-nav .nav-link {
+    color: #333333; // Set text color of navbar links
+    font-size: 18px; // Adjust font size as needed
+    font-weight: 500; // Add semi-bold font style
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #555555; // Change text color on hover
+  }
 }
 
 // model UI login and signUP
@@ -29,5 +46,8 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .navbar {
     padding: 7px 0px;
+  }
+  .social_media_icon {
+    justify-content: center;
   }
 }
