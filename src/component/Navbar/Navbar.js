@@ -11,9 +11,11 @@ export default function NavigationBar() {
       <div>
         <nav className="navbar navbar-expand-lg .bg-body">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
-              Logo
-            </a>
+            <NavLink to="/">
+              <a className="navbar-brand" href="">
+                Logo
+              </a>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,29 +44,29 @@ export default function NavigationBar() {
                   </a>
                 </NavLink>
                 <NavLink to="experience">
-                <a className="nav-link" href="#">
-                  Experience
-                </a>
+                  <a className="nav-link" href="#">
+                    Experience
+                  </a>
                 </NavLink>
                 <NavLink to="project">
-                <a className="nav-link" href="#">
-                  Project
-                </a>
+                  <a className="nav-link" href="#">
+                    Project
+                  </a>
                 </NavLink>
                 <NavLink to="about">
-                <a className="nav-link" href="#">
-                  About
-                </a>
+                  <a className="nav-link" href="#">
+                    About
+                  </a>
                 </NavLink>
                 <NavLink to="contact">
-                <a className="nav-link" href="#">
-                  Contact
-                </a>
+                  <a className="nav-link" href="#">
+                    Contact
+                  </a>
                 </NavLink>
-                <NavLink  to="admin">
-                <a className="nav-link" href="">
-                  Admin
-                </a>
+                <NavLink to="admin">
+                  <a className="nav-link" href="">
+                    Admin
+                  </a>
                 </NavLink>
                 <button
                   type="button"
