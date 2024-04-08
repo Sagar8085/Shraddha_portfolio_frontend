@@ -12,12 +12,21 @@ export default function LoginSignUp() {
   };
 
   const loginValidationSchema = Yup.object({
-    email: Yup.string().email("Invalid email address").required("Email is Required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is Required"),
     password: Yup.string().required("Password is Required"),
   });
 
   const signupValidationSchema = Yup.object({
-    username: Yup.string().required("User name is Required"),
+    username: Yup.string()
+      .trim() // Trim leading and trailing whitespace
+      .required("User name is Required")
+      .test(
+        "no-spaces",
+        "User name cannot consist only of spaces",
+        (value) => !/^\s+$/.test(value) // Check if the value doesn't consist only of spaces
+      ),
     mobile: Yup.number()
       .typeError("That doesn't look like a phone number")
       .positive("A phone number can't start with a minus")

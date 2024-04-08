@@ -15,28 +15,28 @@ export default function Footer() {
             <div className="col-lg-4 col-md-12 text-center mb-3 mb-lg-0">
               <div className="social_media_icon">
                 <a href="#" className="social-link">
-                  <i className="fa-brands fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/shraddha_pushpeyaa/"
                   target="_blank"
                   className="social-link"
                 >
-                  <i className="fa-brands fa-square-instagram"></i>
+                  <i className="fab fa-instagram-square"></i>
                 </a>
                 <a
                   href="https://www.facebook.com/profile.php?id=100084339966866"
                   target="_blank"
                   className="social-link"
                 >
-                  <i className="fa-brands fa-facebook"></i>
+                  <i className="fab fa-facebook"></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/dr-shraddha-khare-875503113/"
                   target="_blank"
                   className="social-link"
                 >
-                  <i className="fa-brands fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
               </div>
             </div>
