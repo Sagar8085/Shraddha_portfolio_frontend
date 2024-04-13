@@ -43,11 +43,11 @@ export default function NavigationBar() {
                     Blogs
                   </a>
                 </NavLink>
-                <NavLink to="experience">
+                {/* <NavLink to="experience">
                   <a className="nav-link" href="#">
                     Experience
                   </a>
-                </NavLink>
+                </NavLink> */}
                 <NavLink to="project">
                   <a className="nav-link" href="#">
                     Project

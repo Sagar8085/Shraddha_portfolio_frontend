@@ -6,23 +6,23 @@ import { ToastOnSuccess } from "../../component/Sweet_Alert/Alert";
 
 export default function Contacts() {
   const signupValidationSchema = Yup.object({
-    username: Yup.string()
-      .trim() // Trim leading and trailing whitespace
-      .required("User name is Required")
-      .test(
-        "no-spaces",
-        "User name cannot consist only of spaces",
-        (value) => !/^\s+$/.test(value) // Check if the value doesn't consist only of spaces
-      ),
+    useremail: Yup.string()
+      .email("Invalid email address")
+      .required("Email is Required"),
     mobile: Yup.number()
       .typeError("That doesn't look like a phone number")
       .positive("A phone number can't start with a minus")
       .integer("A phone number can't include a decimal point")
       .min(1000000000, "A phone number should be at least 10 digits")
       .required("phone number is required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is Required"),
+    subject: Yup.string()
+      .trim() // Trim leading and trailing whitespace
+      .required("User subject is Required")
+      .test(
+        "no-spaces",
+        "User subject cannot consist only of spaces",
+        (value) => !/^\s+$/.test(value) // Check if the value doesn't consist only of spaces
+      ),
     message: Yup.string()
       .trim() // Trim leading and trailing whitespace
       .required("Message is Required")
@@ -35,13 +35,14 @@ export default function Contacts() {
 
   const formikSignup = useFormik({
     initialValues: {
-      username: "",
+      useremail: "",
       mobile: "",
-      email: "",
+      subject: "",
       message: "",
     },
     validationSchema: signupValidationSchema,
     onSubmit: (values) => {
+      console.log("values>>>",values);
       ToastOnSuccess("message send successfully");
     },
   });
@@ -61,23 +62,41 @@ export default function Contacts() {
             <div className="card-body">
               <form onSubmit={formikSignup.handleSubmit} noValidate>
                 <div className="mb-3">
+                  <label htmlFor="signupEmail" className="form-label">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="signupEmail"
+                    placeholder="Enter email"
+                    name="useremail"
+                    onBlur={formikSignup.handleBlur}
+                    value={formikSignup.values.useremail}
+                    onChange={formikSignup.handleChange}
+                  />
+                  {formikSignup.touched.useremail && formikSignup.errors.useremail ? (
+                    <p style={{ color: "red" }}>{formikSignup.errors.useremail}</p>
+                  ) : null}
+                </div>
+                <div className="mb-3">
                   <label htmlFor="signupName" className="form-label">
-                    Full Name
+                    Subject
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     id="signupName"
-                    placeholder="Enter your name"
-                    name="username"
+                    placeholder="Enter your Subject"
+                    name="subject"
                     onBlur={formikSignup.handleBlur}
-                    value={formikSignup.values.username}
+                    value={formikSignup.values.subject}
                     onChange={formikSignup.handleChange}
                   />
-                  {formikSignup.touched.username &&
-                  formikSignup.errors.username ? (
+                  {formikSignup.touched.subject &&
+                  formikSignup.errors.subject ? (
                     <p style={{ color: "red" }}>
-                      {formikSignup.errors.username}
+                      {formikSignup.errors.subject}
                     </p>
                   ) : null}
                 </div>
@@ -97,24 +116,6 @@ export default function Contacts() {
                   />
                   {formikSignup.touched.mobile && formikSignup.errors.mobile ? (
                     <p style={{ color: "red" }}>{formikSignup.errors.mobile}</p>
-                  ) : null}
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="signupEmail" className="form-label">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="signupEmail"
-                    placeholder="Enter email"
-                    name="email"
-                    onBlur={formikSignup.handleBlur}
-                    value={formikSignup.values.email}
-                    onChange={formikSignup.handleChange}
-                  />
-                  {formikSignup.touched.email && formikSignup.errors.email ? (
-                    <p style={{ color: "red" }}>{formikSignup.errors.email}</p>
                   ) : null}
                 </div>
                 <div className="mb-3">
