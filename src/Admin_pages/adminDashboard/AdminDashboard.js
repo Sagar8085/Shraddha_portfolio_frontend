@@ -9,7 +9,7 @@ export default function AdminDashboard() {
         <div className="row justify-content-center">
           <div className="col-md-12">
             {" "}
-            <Table striped bordered hover variant="">
+            <Table bordered hover variant="">
               <thead>
                 <tr>
                   <th>#</th>
