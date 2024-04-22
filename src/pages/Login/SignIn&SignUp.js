@@ -159,7 +159,7 @@ export default function LoginSignUp() {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="signupName" className="form-label">
-                      Mobile Numbwe
+                      Mobile Number
                     </label>
                     <input
                       type="text"

@@ -68,6 +68,16 @@ export default function NavigationBar() {
                     Admin
                   </a>
                 </NavLink>
+                <NavLink to="adminblog">
+                  <a className="nav-link" href="">
+                    Admin blog
+                  </a>
+                </NavLink>
+                <NavLink to="adminproject">
+                  <a className="nav-link" href="">
+                    Admin project
+                  </a>
+                </NavLink>
                 <button
                   type="button"
                   class="btn btn-outline-primary SignIn_SignUp"

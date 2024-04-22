@@ -41,12 +41,12 @@ export default function Projects() {
               />
             </div>
             <div className="col-lg-6 col-md-12 text-center mb-3 mb-lg-0 projectColumn">
-              <h2 className="UseName">Waterfront concerts
-</h2>
+              <h2 className="UseName">Waterfront concerts</h2>
               <p className="projectDescription">
-              Based on the live event phenomenon, admin can create a public/private event as per their own and users can join it.
-Web application will manage all the event history and application data.
-s
+                Based on the live event phenomenon, admin can create a
+                public/private event as per their own and users can join it. Web
+                application will manage all the event history and application
+                data. s
               </p>
             </div>
           </div>

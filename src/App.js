@@ -8,6 +8,9 @@ import Blogs from "./pages/Blogs/Blogs";
 import Contacts from "./pages/Contact/Contacts";
 // import Experience from "./pages/Experience/Experience";
 import Projects from "./pages/Project/Projects";
+import AdminDashboard from "./Admin_pages/adminDashboard/AdminDashboard";
+import AdminBlogs from "./Admin_pages/adminBlog/AdminBlogs";
+import AdminProjects from "./Admin_pages/adminProjects/AdminProjects";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path="contact" element={<Contacts />} />
         {/* <Route path="experience" element={<Experience />} /> */}
         <Route path="project" element={<Projects />} />
+        <Route path="admin" element={<AdminDashboard />} />
+        <Route path="adminblog" element={<AdminBlogs />} />
+        <Route path="adminproject" element={<AdminProjects />} />
       </Routes>
       <Footer />
     </div>
