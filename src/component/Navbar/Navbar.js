@@ -68,7 +68,7 @@ export default function NavigationBar() {
                     Admin
                   </a>
                 </NavLink>
-                <NavLink to="adminblog">
+                {/* <NavLink to="adminblog">
                   <a className="nav-link" href="">
                     Admin blog
                   </a>
@@ -78,6 +78,12 @@ export default function NavigationBar() {
                     Admin project
                   </a>
                 </NavLink>
+                <NavLink to="adminprofile">
+                  <a className="nav-link" href="">
+                    Admin Profile
+                  </a>
+                </NavLink> */}
+
                 <button
                   type="button"
                   class="btn btn-outline-primary SignIn_SignUp"

@@ -1,6 +1,7 @@
 import React from "react";
 import "./adminDashboard.scss";
 import Table from "react-bootstrap/Table";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 export default function AdminDashboard() {
   return (
@@ -8,36 +9,29 @@ export default function AdminDashboard() {
       <div className="container-fluid p-5 bg-white">
         <div className="row justify-content-center">
           <div className="col-md-12">
-            {" "}
-            <Table bordered hover variant="">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td colSpan={2}>Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
+            <div className="adminLinks">
+              <NavLink to="/admin/blog">
+                {" "}
+                <button type="button" class="btn btn-link">
+                  Blogs
+                </button>
+              </NavLink>
+              <NavLink to="/admin/project">
+                {" "}
+                <button type="button" class="btn btn-link">
+                  Projects
+                </button>
+              </NavLink>
+              <NavLink to="/admin/profile">
+                {" "}
+                <button type="button" class="btn btn-link">
+                  Profile
+                </button>
+              </NavLink>
+            </div>{" "}
+            <div>
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>
